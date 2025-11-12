@@ -167,7 +167,6 @@ function CorpusApp() {
         </div>
     </>;
 }
-ReactDOM.render(<CorpusApp />, document.getElementById('corpus-root'));
-</script>
+const root = ReactDOM.createRoot(document.getElementById('corpus-root')); root.render(<CorpusApp />);</script>
 </body>
 </html>
