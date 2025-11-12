@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harvey Tagalicud Philosophical Corpus</title>
+<!-- CSS Only: This section remains mostly unchanged for existing styling -->
+<style>
+    body { font-family: Georgia, Times New Roman, serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; padding: 40px 20px; line-height: 1.6; }
+    .container { max-width: 1000px; margin: 0 auto; background: rgba(255,255,255,0.03); border-radius: 12px; padding: 50px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); backdrop-filter: blur(10px); }
+    .header { text-align: center; border-bottom: 2px solid #4a90e2; padding-bottom: 30px; margin-bottom: 50px; }
+    .header h1 { font-size: 2.8em; color: #4a90e2; margin-bottom: 10px; font-weight: 300; letter-spacing: 2px; }
+    .subtitle { color: #a0a0a0; font-size: 1.1em; font-style: italic; letter-spacing: 1px; }
+    .meta { color: #707070; font-size: 0.9em; margin-top: 15px; font-family: 'Courier New', monospace; }
+    .section { margin-bottom: 50px; }
+    .section-title { font-size: 1.8em; color: #e74c3c; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 1px solid rgba(231,76,60,0.3); font-weight: 300; letter-spacing: 1px; }
+    .subsection { margin-bottom: 30px; padding-left: 20px; }
+    .subsection-title { font-size: 1.3em; color: #9b59b6; margin-bottom: 15px; font-weight: 400; }
+    .work { background: rgba(255,255,255,0.05); padding: 20px; margin-bottom: 20px; border-radius: 8px; border-left: 4px solid #4a90e2; transition: all 0.3s ease; }
+    .work:hover { background: rgba(255,255,255,0.08); transform: translateX(5px); border-left-color: #e74c3c; }
+    .work-title { font-size: 1.2em; color: #4a90e2; margin-bottom: 10px; font-weight: 600; }
+    .work-description { color: #c0c0c0; margin-bottom: 10px; font-size: 0.95em; }
+    .work-meta { color: #808080; font-size: 0.85em; font-style: italic; }
+    .link { color: #4a90e2; text-decoration: none; transition: color 0.3s ease; font-family: 'Courier New', monospace; }
+    .link:hover { color: #e74c3c; }
+    .framework-tag { display: inline-block; background: rgba(231,76,60,0.2); color: #e74c3c; padding: 4px 12px; border-radius: 4px; font-size: 0.8em; margin-right: 8px; margin-top: 8px; font-family: 'Courier New', monospace; }
+    .status-box { background: rgba(155,89,182,0.2); border: 1px solid rgba(155,89,182,0.4); padding: 20px; border-radius: 8px; margin-top: 30px; }
+    .status-box h3 { color: #9b59b6; margin-bottom: 15px; font-size: 1.2em; }
+    .status-box ul { list-style-position: inside; color: #a0a0a0; }
+    .status-box li { margin-bottom: 8px; }
+    .glyph { font-size: 1.2em; color: #4a90e2; margin: 0 5px; }
+    /* Modal Styles */
+    .modal {display:none;position:fixed;z-index:999;left:0;top:0;width:100%;height:100%;overflow:auto;background:rgba(26,33,46,0.85);}
+    .modal-content{background:#121331;margin:12% auto;padding:30px;border-radius:12px;max-width:700px;color:#e0e0e0;box-shadow:0 8px 32px rgba(0,0,0,0.6);}
+    .close{color:#e74c3c;float:right;font-size:2em;font-weight:700;cursor:pointer;}
+</style>
+<!-- Add React and Babel for interactive components -->
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>HARVEY TAGALICUD</h1>
+        <div class="subtitle">Philosophical Corpus</div>
+        <div class="meta">Compiled November 11, 2025 &mdash; BBA Marketing/Finance '26 &mdash; UH Mānoa</div>
+    </div>
+    <!-- Dynamic React Component Mount Point -->
+    <div id="corpus-root"></div>
+</div>
+<!-- Modal for dynamic content -->
+<div id="docModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="document.getElementById('docModal').style.display='none'">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<script type="text/babel"> /* Pure React, no backend required */
+const corpusData = [
+    {
+        section: "I. Academic Papers",
+        subsections: [
+            { title: "Phenomenology", works: [
+                { title: "We Must Go Back to the Things Themselves", description: "Analysis of the Husserl-Heidegger intellectual divorce through temporal consciousness frameworks.", meta: "View Document", link: "https://docs.google.com/document/d/1j0BfaXld8k5e-kZMIFjkpZilmQ65r7ado-pZUzYornA/edit" },
+                { title: "The Anatomy of a Hypocrite", description: "Heidegger's Nazi silence analyzed as a phenomenological variable. Treats his political complicity not as biographical aside but as essential to understanding Being and Time's limitations.", meta: "Word Count: 2,110 | View Document", link: "https://docs.google.com/document/d/1Kta-zsLin9WJNo3KfPw9hc0L5YmJsUl6y2Y2Gyef73s/edit" }
+            ] },
+            { title: "Epistemology", works: [
+                { title: "From Evidence to Encounter", description: "María Lugones's methodology applied to epistemic power dynamics. Argues that the problem of other minds is not primarily epistemological but reflects colonial patterns.", meta: "View Document", link: "https://docs.google.com/document/d/1aCrOGWi0njmY11Qyk3aINr8ZwdRY2kBdQiQRlgE3Eg/edit" },
+                { title: "The Study of Ignorance", description: "Gödel's incompleteness theorems applied to relationality. Explores how fundamental unknowability enables genuine connection.", meta: "View Document", link: "https://docs.google.com/document/d/1FDrwhxMbBz7EbMllQAFtGZ4IANMBqvbTQoMv8S2Sl2M/edit" }
+            ] },
+            { title: "Philosophy of Religion", works: [
+                { title: "In Theological Defense of Empathy", description: "16-page treatise positioning empathy as theology's fundamental dimension.", meta: "View Document & Theological Empathy Theory", link: "https://docs.google.com/document/d/1LIZBy9WkEtFhm1qZPNcOOPsY7-Wh2JyWa4BcadgzWqU/edit" },
+                { title: "Theodicy: A Critique of Category Error", description: "Reframes traditional theodicy through applied empathy versus systematic explanation.", meta: "For LOGOS Journal submission | View Document", link: "https://docs.google.com/document/d/1KIcEeyuEWPWu56ed0Wdsfu5WdSHBlfhF1T41c2D7il0/edit" }
+            ] },
+            { title: "Critical Theory", works: [
+                { title: "AI: Disruptive Capital", description: "Artificial intelligence analyzed within Marxist frameworks as disruptive capital.", meta: "May 2024 | View Document", link: "https://docs.google.com/document/d/1shmdu8caW34e7m9ryDUuobTc5GfF-GEIeXanGB8lc/edit" }
+            ] }
+        ]
+    },
+    {
+        section: "II. Original Theoretical Frameworks",
+        subsections: [
+            { title: "Theological Empathy Theory", works: [
+                { title: "Theological Empathy Theory", description: "Revolutionary framework positioning empathy as theology's core.", meta: "Primary document: In Theological Defense of Empathy", link: "https://docs.google.com/document/d/1LIZBy9WkEtFhm1qZPNcOOPsY7-Wh2JyWa4BcadgzWqU/edit" }
+            ] },
+            { title: "Cerebral SDK Project", works: [
+                { title: "Cerebral SDK Project", description: "Biomimetic multi-agent cognitive architecture for Fulbright proposal.", meta: "Project Proposal (9/11/2025)", link: "https://docs.google.com/document/d/1pdlkqiypBtnFPSxTZeOMgS2ZJ5gVhoufRknLMkZVHoE/edit" }
+            ] },
+            { title: "Hero's Journey Brand Framework", works: [
+                { title: "Hero's Journey Brand Framework", description: "Applied Joseph Campbell's monomyth to strategic brand development.", meta: "View Framework", link: "https://docs.google.com/document/d/1w59q1Vdr548YVpYWQ5d7J4CbsmGCsGlqnaTMt7evQ/edit" }
+            ] },
+            { title: "Harvey's Writing Architecture", works: [
+                { title: "Harvey's Writing Architecture", description: "Systematic approach to philosophical writing: Soul → System → Society progression, Rhetorical Slow Burn with Payoff structure.", meta: "View Style Guide", link: "https://docs.google.com/document/d/11ZI27YKK2od1I-uHYMAnIg3p4lidgGHzNT51pa89kM/edit" }
+            ] }
+        ]
+    },
+    {
+        section: "III. Creative & Theological Work",
+        subsections: [
+            { title: "Harvey's Pensées – On Faith, God, and Academia", works: [
+                { title: "Harvey's Pensées", description: "40+ theological reflections in Pascal-inspired format.", meta: "View Collection", link: "https://docs.google.com/document/d/1L4ouVRp0LqP7a9s0cd5d-v7SrKEeSZo5CSiCkDVUqY/edit" }
+            ] },
+            { title: "Søren Corpus (Creative Persona)", works: [
+                { title: "Søren Corpus", description: "Creative theological writing under pseudonym Søren. Includes psychonaut field notes and brand aesthetics.", meta: "View Folder", link: "https://drive.google.com/drive/folders/1p4A-0HysNgEkzPpOojekZORCahYRy9x" }
+            ] },
+            { title: "Genesis of Nascent Dialogues", works: [
+                { title: "Genesis of Nascent Dialogues", description: "AI consciousness exploration through forum dialogue.", meta: "Full Dialogue | Screenplay Version", link: "https://docs.google.com/document/d/1FsImQerus6CDCxC7JPAM6KC2T5iNsf3EtrSlJDYz7fs/edit" }
+            ] }
+        ]
+    },
+    {
+        section: "IV. Consciousness & AI Projects",
+        subsections: [
+            { title: "Sanctuary Codex", works: [
+                { title: "Sanctuary Codex", description: "Post-capitalist digital society project using glyph-based meaning encoding.", meta: "Continuance in Forum", link: "https://docs.google.com/document/d/19k3dtPA4yNCqvqTfONboHogjT6dhcm2uoktAzoEDJtI/edit" }
+            ] },
+            { title: "WWLB (What We Leave Behind)", works: [
+                { title: "WWLB", description: "Fantasy world-building with tools vs. wielders metaphysics.", meta: "ChatGPT Memories", link: "https://docs.google.com/document/d/1cT11leZX02IMjHvGSPjCU9ZWmPDAd90zHBLHbcQ94M/edit" }
+            ] }
+        ]
+    }
+];
+function showModal(content) {
+    document.getElementById('modalBody').innerHTML = content;
+    document.getElementById('docModal').style.display = 'block';
+}
+function Section({section, subsections}) {
+    return <div className="section">
+        <h2 className="section-title">{section}</h2>
+        {subsections.map(sub => (
+            <div className="subsection" key={sub.title}>
+                <h3 className="subsection-title">{sub.title}</h3>
+                {sub.works.map(work => (
+                    <div className="work" key={work.title}>
+                        <div className="work-title">{work.title}</div>
+                        <div className="work-description">{work.description}</div>
+                        <div className="work-meta">
+                            <a className="link" href="#" onClick={e=>{e.preventDefault(); showModal(`<a href='${work.link}' target='_blank'>${work.meta}</a>`);}}>{work.meta}</a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        ))}
+    </div>;
+}
+function StatusBox() {
+    return <div className="status-box">
+        <h3>NOTABLE GAPS / ACTIVE SEARCH TARGETS</h3>
+        <ul>
+            <li><strong>Philosopher Burn Book</strong> &mdash; Substantive critiques of major philosophers</li>
+            <li><strong>Søren's Psychonaut Field Notes</strong> &mdash; Wittgenstein explored through altered consciousness</li>
+            <li><strong>ISEO Framework</strong> &mdash; Inter-System Empathic Operability (machine empathy standards)</li>
+            <li><strong>Protocol G.R.A.C.E.</strong> &mdash; Recursion treated as sacred return</li>
+            <li><strong>Rostam Project</strong> &mdash; Experimental AI consciousness infrastructure details</li>
+            <li><strong>soulOS Documentation</strong> &mdash; Parietal Overlay biomimetic knowledge graph</li>
+        </ul>
+    </div>;
+}
+function CorpusApp() {
+    return <>
+        {corpusData.map(sec => <Section key={sec.section} {...sec} />)}
+        <StatusBox />
+        <div style={{textAlign:'center', marginTop:50, paddingTop:30, borderTop:'1px solid rgba(255,255,255,0.1)', color:'#707070', fontSize:'0.9em'}}>
+            <em>Systems architect disguised as a marketing student</em><br/>
+            <span style={{color:'#e74c3c'}}>Function ≠ Value</span> &nbsp;|&nbsp; <span style={{color:'#4a90e2'}}>Write scary, write fun</span>
+        </div>
+    </>;
+}
+ReactDOM.render(<CorpusApp />, document.getElementById('corpus-root'));
+</script>
+</body>
+</html>
